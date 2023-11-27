@@ -19,17 +19,17 @@ int main() {
         if(cust[i] < ck[0]) {
             ldr = 1;
             mbr[i]=0;
-            break;
+            continue;
         } else {
-            ldr = cust[i] / ck[0];
+            ldr = 1;
         }
 
-        int mod = cust[i] % ck[0];
+        int mod = (cust[i]-ck[0]);
 
         if(mod < ck[1]) {
             mbr[i] = 1;
         } else {
-            mbr[i] = mod / ck[1];
+            mbr[i] = mod / ck[1]+1;
         }
     }
 
