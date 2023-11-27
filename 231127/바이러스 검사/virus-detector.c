@@ -16,7 +16,7 @@ int main() {
     long long mbr[rest];
 
     for(int i = 0; i < rest; i++) {
-        if(cust[i] < ck[0]) {
+        if(cust[i] <= ck[0]) {
             ldr = 1;
             mbr[i]=0;
             continue;
@@ -26,7 +26,7 @@ int main() {
 
         int mod = (cust[i]-ck[0]);
 
-        if(mod < ck[1]) {
+        if(mod <= ck[1]) {
             mbr[i] = 1;
         } else {
             mbr[i] = mod / ck[1]+1;
